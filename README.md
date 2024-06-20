@@ -1,69 +1,87 @@
-# ecommerce-app
+# 🛍️ eCommerce Application
 
-This is RSS study project of Func Crafters (Ekaterina, Maria and Alexey) a team of students aims to create a high-class e-commerce application, enhance their front-end development skills, and gain valuable experience in teamwork.
+## 📖 Описание
 
-For our project we use TS, FP, Webpack, Husky, ESLint, Prettier, jest.
+Полнофункциональное веб-приложение интернет-магазина, созданное для имитации реального процесса онлайн-покупок. Пользователь может просматривать каталог товаров, фильтровать и сортировать позиции, добавлять товары в корзину и оформлять заказ.
+Приложение реализовано как SPA и адаптировано под различные устройства.
 
-## How to set up and run project locally
+Проект разработан в команде из 3 человек в рамках курса [RS School (Stage #2)](https://github.com/rolling-scopes-school/tasks/tree/master/stage2). Работа велась по методологии Scrumban — 4 спринта по 2 недели.
 
-## Prerequisites
+## 🎯 Цель
 
-Ensure you have **Node.js** installed on your system, which includes **npm** (Node Package Manager). You can download it from the official Node.js website.
+Создание современного, адаптивного и масштабируемого e-commerce приложения, демонстрирующего навыки работы с TypeScript, модульной архитектурой и внешними API.
 
-## 1. Clone the Repository
+## 🧩 Задачи
 
-Open a terminal and run the following command to clone the git repository:
+* Разработать клиентское приложение с регистрацией и авторизацией пользователей.
+* Реализовать каталог товаров с фильтрацией, сортировкой и поиском.
+* Настроить корзину с сохранением данных и оформлением заказа.
+* Интегрировать Commercetools SDK для взаимодействия с сервером.
+* Обеспечить адаптивную и доступную вёрстку.
 
+## 🛠️ Технологии
+
+* Vanilla JavaScript, TypeScript
+* Webpack, ESLint, Prettier
+* Commercetools SDK
+* HTML5, CSS3, SCSS, BEM
+* Netlify
+
+## ⚙️ Функционал
+
+* 🔐 Регистрация и авторизация пользователей
+* 🏷️ Каталог товаров с фильтрацией, поиском и сортировкой
+* 🛒 Корзина с сохранением данных
+* 👤 Личный кабинет пользователя
+* 📱 Адаптивный дизайн
+* 💳 Оформление заказа
+* ℹ️ Страница «О нас»
+
+## 🚀 Демо
+
+🔗 Deploy: [https://nuriver-ecommerce-app-sprint4.netlify.app/](https://nuriver-ecommerce-app-sprint4.netlify.app/)
+
+
+## 💻 Как запустить проект локально
+
+### 1. Установите зависимости
+
+```bash
 git clone <repository-url>
+cd <project-folder>
+npm install
+```
 
-Replace `<repository-url>` with the actual URL of your git repository.
+### 2. Настройте переменные окружения
 
-## 2. Install Dependencies
+Создайте файл `.env` в корне проекта и добавьте в него:
 
-Navigate to the project directory and install the dependencies listed in `package.json`:
+```
+CTP_PROJECT_KEY=<your_project_key>
+CTP_CLIENT_SECRET=<your_client_secret>
+CTP_CLIENT_ID=<your_client_id>
+CTP_AUTH_URL=<your_auth_url>
+CTP_API_URL=<your_api_url>
+CTP_SCOPES=<your_scopes>
+```
 
-cd <project-name> npm install
+### 3. Запуск проекта
 
-Replace `<project-name>` with the name of your project directory.
-
-## 3. Start the Development Server
-
-Start the development server using:
-
+```bash
 npm run start
+```
 
-This will start the dev-server as specified in your `package.json`.
+Откройте в браузере [http://localhost:8080](http://localhost:8080)
 
-## 4. Access the Application
+### 4. Сборка проекта
 
-Open a web browser and go to `http://localhost:8080` to view your application.
-
-## 5. Build the Application
-
-To trigger the build process which compiles and bundles projects' files ready for production run:
-
+```bash
 npm run build
+```
 
-## 6. Run Tests (Optional)
+### 5. Проверка кода и форматирование
 
-If you want to run tests using **jest**, execute:
-
-npm run test
-
-## 7. Environment Setup
-
-Before running the application, you need to set up the environment variables. Create a `.env` file in the root directory of the project and add the following variables:
-
-CTP_PROJECT_KEY
-CTP_CLIENT_SECRET
-CTP_CLIENT_ID
-CTP_AUTH_URL
-CTP_API_URL
-CTP_SCOPES
-
-## 8. Linting and Formatting (Optional)
-
-To ensure your code follows the coding standards, you can run **eslint** and **prettier**:
-
+```bash
 npm run lint
 npm run format
+```
